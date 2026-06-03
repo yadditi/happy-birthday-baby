@@ -1,0 +1,407 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#EAF7FF,#D9F1FF);
+overflow-x:hidden;
+color:#24425c;
+min-height:100vh;
+}
+
+.page{
+display:none;
+min-height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:30px;
+text-align:center;
+}
+
+.active{
+display:flex;
+}
+
+footer{
+position:fixed;
+bottom:10px;
+width:100%;
+text-align:center;
+font-size:12px;
+opacity:.7;
+}
+
+#tracker{
+position:fixed;
+top:15px;
+right:15px;
+background:white;
+padding:10px 15px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+z-index:100;
+display:flex;
+gap:12px;
+font-size:18px;
+}
+
+.background-elements{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+/* Clouds */
+
+.cloud{
+position:absolute;
+font-size:60px;
+opacity:.45;
+animation:floatCloud 25s linear infinite;
+}
+
+.cloud1{
+top:10%;
+left:-100px;
+}
+
+.cloud2{
+top:35%;
+left:-150px;
+animation-duration:30s;
+}
+
+.cloud3{
+top:70%;
+left:-120px;
+animation-duration:35s;
+}
+
+@keyframes floatCloud{
+
+0%{
+transform:translateX(-150px);
+}
+
+100%{
+transform:translateX(calc(100vw + 300px));
+}
+
+}
+
+/* Sparkles */
+
+.sparkle{
+position:absolute;
+font-size:22px;
+animation:twinkle 2.5s infinite;
+}
+
+.sparkle1{
+top:15%;
+left:20%;
+}
+
+.sparkle2{
+top:30%;
+right:15%;
+}
+
+.sparkle3{
+bottom:25%;
+left:12%;
+}
+
+.sparkle4{
+bottom:15%;
+right:20%;
+}
+
+@keyframes twinkle{
+
+50%{
+opacity:.2;
+transform:scale(.7);
+}
+
+}
+
+/* Flowers */
+
+.flower{
+position:absolute;
+font-size:24px;
+animation:flowerFloat 8s ease-in-out infinite;
+}
+
+.flower1{
+left:8%;
+bottom:20%;
+}
+
+.flower2{
+right:10%;
+top:25%;
+}
+
+@keyframes flowerFloat{
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+/* Loading */
+
+.loading-box{
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.loader{
+width:50px;
+height:50px;
+margin:20px auto;
+border:5px solid #cfefff;
+border-top:5px solid #6dcfff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+/* Welcome */
+
+.welcome-card{
+background:white;
+padding:40px;
+border-radius:30px;
+max-width:650px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.teddy{
+font-size:90px;
+margin-bottom:15px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+.welcome-card h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.welcome-card p{
+font-size:18px;
+line-height:1.8;
+}
+
+/* Buttons */
+
+button{
+background:#8DD7FF;
+border:none;
+padding:14px 25px;
+margin-top:20px;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px);
+background:#6ec8ff;
+}
+
+/* Gift Page */
+
+.subtitle{
+margin-top:10px;
+margin-bottom:25px;
+}
+
+.gift-container{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.gift-box{
+background:white;
+width:220px;
+padding:25px;
+border-radius:25px;
+cursor:pointer;
+transition:.35s;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.gift-box:hover{
+transform:translateY(-8px) scale(1.05);
+}
+
+.gift-icon{
+font-size:70px;
+margin-bottom:15px;
+}
+
+.gift-box h3{
+font-size:18px;
+}
+
+/* Content Cards */
+
+.content-card{
+background:white;
+padding:35px;
+border-radius:25px;
+max-width:750px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.content-card h2{
+margin-bottom:20px;
+}
+
+.love-card{
+background:#eef9ff;
+padding:15px;
+border-radius:15px;
+margin:10px 0;
+transition:.3s;
+}
+
+.love-card:hover{
+transform:scale(1.03);
+}
+
+.final-line{
+margin-top:20px;
+font-weight:600;
+}
+
+/* Cake */
+
+.cake{
+font-size:140px;
+cursor:pointer;
+margin:15px 0;
+transition:.3s;
+animation:bounce 2s infinite;
+}
+
+.cake:hover{
+transform:scale(1.1);
+}
+
+/* Letter */
+
+.letter-box{
+background:white;
+padding:35px;
+max-width:850px;
+height:75vh;
+overflow:auto;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.letter-box h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+.letter-box p{
+line-height:2;
+}
+
+.button-group{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+/* Hidden */
+
+.hidden-teddy{
+font-size:100px;
+}
+
+/* Final */
+
+.heart{
+font-size:120px;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.15);
+}
+
+}
+
+#typewriter{
+margin-top:30px;
+max-width:700px;
+font-size:24px;
+line-height:2;
+font-weight:500;
+white-space:pre-line;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.welcome-card h1{
+font-size:30px;
+}
+
+.gift-box{
+width:100%;
+max-width:320px;
+}
+
+#tracker{
+font-size:15px;
+}
+
+#typewriter{
+font-size:20px;
+}
+
+.letter-box{
+height:70vh;
+}
+
+}

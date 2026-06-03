@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Baby 💙</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Background -->
+  <div class="background-elements">
+      <div class="cloud cloud1">☁️</div>
+      <div class="cloud cloud2">☁️</div>
+      <div class="cloud cloud3">☁️</div>
+
+      <div class="sparkle sparkle1">✨</div>
+      <div class="sparkle sparkle2">✨</div>
+      <div class="sparkle sparkle3">✨</div>
+      <div class="sparkle sparkle4">✨</div>
+
+      <div class="flower flower1">🌸</div>
+      <div class="flower flower2">🌸</div>
+  </div>
+
+  <!-- Progress Tracker -->
+  <div id="tracker">
+      <span>🧸 <span id="love-status">❓</span></span>
+      <span>🎂 <span id="magic-status">❓</span></span>
+      <span>💌 <span id="letter-status">❓</span></span>
+  </div>
+
+  <!-- Loading Page -->
+  <section id="loading" class="page active">
+      <div class="loading-box">
+          <h1>💙 Loading Love...</h1>
+          <p>Preparing your birthday surprise...</p>
+          <div class="loader"></div>
+      </div>
+  </section>
+
+  <!-- Welcome Page -->
+  <section id="welcome" class="page">
+
+      <div class="welcome-card">
+
+          <div class="teddy">🧸</div>
+
+          <h1>Happy Birthday Baby! 💙</h1>
+
+          <p>
+              I made a little world full of love,
+              just for you.
+          </p>
+
+          <button onclick="showPage('gifts')">
+              Enter →
+          </button>
+
+      </div>
+
+  </section>
+
+  <!-- Gift Room -->
+  <section id="gifts" class="page">
+
+      <h2>Choose Your Gift 🎁</h2>
+
+      <p class="subtitle">
+          Hope you like them, Baby 💙
+      </p>
+
+      <div class="gift-container">
+
+          <div class="gift-box" onclick="openGift('love')">
+
+              <div class="gift-icon">🧸</div>
+
+              <h3>Open Me</h3>
+
+          </div>
+
+          <div class="gift-box" onclick="openGift('magic')">
+
+              <div class="gift-icon">🎂</div>
+
+              <h3>Birthday Magic</h3>
+
+          </div>
+
+          <div class="gift-box" onclick="openGift('letter')">
+
+              <div class="gift-icon">💌</div>
+
+              <h3>For Your Eyes Only</h3>
+
+          </div>
+
+      </div>
+
+      <div id="secretUnlock"></div>
+
+  </section>
+
+  <!-- Love Page -->
+  <section id="love" class="page">
+
+      <div class="content-card">
+
+          <h2>Things I Love About You 💙</h2>
+
+          <div class="love-card">💙 Your smile</div>
+          <div class="love-card">💙 Your kindness</div>
+          <div class="love-card">💙 The way you care</div>
+          <div class="love-card">💙 The way you make me laugh</div>
+          <div class="love-card">💙 The way you make ordinary days feel special</div>
+          <div class="love-card">💙 Simply being you</div>
+
+          <p class="final-line">
+              And honestly...
+              I could keep writing forever. 💙
+          </p>
+
+          <button onclick="showPage('gifts')">
+              ⬅ Back To Gifts
+          </button>
+
+      </div>
+
+  </section>
+
+  <!-- Birthday Magic -->
+  <section id="magic" class="page">
+
+      <div class="content-card">
+
+          <h2>Birthday Magic ✨</h2>
+
+          <div class="cake" onclick="makeWish()">
+              🎂
+          </div>
+
+          <p id="wishText">
+              Make a birthday wish, Baby ✨
+          </p>
+
+          <div id="confettiArea"></div>
+
+          <button onclick="showPage('gifts')">
+              ⬅ Back To Gifts
+          </button>
+
+      </div>
+
+  </section>
+
+  <!-- Letter -->
+  <section id="letter" class="page">
+
+      <div class="letter-box">
+
+          <h2>💌 A Letter From My Heart</h2>
+
+          <p>
+              Happy Birthday, Baby! ❤️
+              <br><br>
+
+              Thank you for coming into my life and making it so special.
+              You are truly an incredible person,
+              and I feel lucky to have you in my life.
+
+              <br><br>
+
+              Whenever I see you,
+              my heart feels at peace,
+              my mind becomes calm,
+              and everything around me seems more beautiful.
+              Your presence makes every moment special,
+              and being with you feels like home.
+
+              <br><br>
+
+              I wish you endless happiness,
+              success,
+              strength,
+              and all the beautiful things you deserve.
+              May this year bring you countless reasons to smile,
+              unforgettable memories,
+              and everything your heart hopes for.
+
+              <br><br>
+
+              Happy Birthday once again, Baby,
+              and thank you for being you. ✨❤️
+
+              <br><br>
+
+              Forever & Always,
+              <br>
+              Aditi 💙
+          </p>
+
+          <div class="button-group">
+
+              <button onclick="showPage('gifts')">
+                  ⬅ Back To Gifts
+              </button>
+
+              <button onclick="showPage('hidden')">
+                  Continue →
+              </button>
+
+          </div>
+
+      </div>
+
+  </section>
+
+  <!-- Hidden Page -->
+  <section id="hidden" class="page">
+
+      <div class="content-card">
+
+          <div class="teddy hidden-teddy">
+              🧸
+          </div>
+
+          <h2>One More Thing...</h2>
+
+          <p>
+              Baby...
+              <br><br>
+
+              You know something?
+              <br><br>
+
+              Every time you say hi,
+              my whole day gets better. 💙
+          </p>
+
+          <div class="button-group">
+
+              <button onclick="showPage('gifts')">
+                  ⬅ Back To Gifts
+              </button>
+
+              <button onclick="showPage('final')">
+                  Final Surprise ❤️
+              </button>
+
+          </div>
+
+      </div>
+
+  </section>
+
+  <!-- Final Page -->
+  <section id="final" class="page">
+
+      <div class="heart">❤️</div>
+
+      <div id="typewriter"></div>
+
+  </section>
+
+  <footer>
+      Made with 💙 by Aditi
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
